@@ -19,9 +19,9 @@
                 </a>
             </div>
             <nav class="main-nav">
-                <a href="#">Home</a>
-                <a href="#">Film</a>
-                {{-- <a href="#">Serie TV</a> --}}
+                <a href="{{route('homepage')}}">Home</a>
+                <a href="{{route('cataloguefm')}}">Film</a>
+                <a href="{{route('cataloguetv')}}">Serie TV</a>
             </nav>
         </header>
 
@@ -32,9 +32,10 @@
                     Vuoi guardare Netflix? Inserisci l'indirizzo email per abbonarti o riattivare il tuo abbonamento.
                 </p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-                    <button type="button" class="btn btn-danger btn-lg px-4 me-sm-3">Guarda i Film</button>
-                    {{-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Esercizio</button> --}}
+                    <a href="{{route('cataloguefm')}}"><button type="button" class="btn btn-danger btn-lg px-4 me-sm-3">Guarda i Film</button></a>
+                    <a href="{{route('cataloguetv')}}"><button type="button" class="btn btn-outline-secondary btn-lg px-4">Guarda le Serie Tv</button></a>
                 </div>
+                
             </div>
             <div class="overflow-hidden" style="max-height: 30vh;">
                 <div class="container px-5">

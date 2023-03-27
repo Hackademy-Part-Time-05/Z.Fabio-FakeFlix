@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FakeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [FakeController::class, 'index'])->name('homepage');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->name('homepage');
 
-Route::get('/catalogo', function () {
-    return view('catalogue');
-});
+
+Route::get('/filmsr', [FakeController::class,'filmsr'])->name('cataloguefm');
+// Route::get('/catalogo', function () {
+//     return view('catalogue');
+// })->name('catalogue');
+
+Route::get('/tvseries', [FakeController::class,'tvseries'])->name('cataloguetv');
+
+Route::get('/catalogofm/{id}', [FakeController::class,'catalogofm'])->name('catalogue1');
